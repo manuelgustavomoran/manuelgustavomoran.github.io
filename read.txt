@@ -1,0 +1,22 @@
+#1. To first initialize React Framework:
+npx create-react-app .
+
+#2. gh-pages installation, which helps to deploy Github pages easily
+npm install --save-dev gh-pages
+
+#3. Edit package.json:
+  #add this line after "name" and before "dependencies"
+  "homepage": "https://manuelgustavomoran.github.io/"
+  #add this scripts 
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+  #example:
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+
